@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tremembé Wolf FC | Site Oficial</title>
+  <style>
+    :root {
+      --verde: #0b3d2e;
+      --vermelho: #b00000;
+      --branco: #ffffff;
+      --cinza: #f4f4f4;
+      --preto: #111111;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: var(--cinza);
+      color: var(--preto);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--verde), var(--vermelho));
+      color: var(--branco);
+      padding: 30px 20px;
+    }
+
+    .topo {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      width: 90px;
+    }
+
+    nav a {
+      color: var(--branco);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: url('banner.jpg') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      color: var(--branco);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      background: var(--branco);
+      margin-top: 30px;
+      border-radius: 12px;
+    }
+
+    section h2 {
+      color: var(--verde);
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      border-left: 6px solid var(--vermelho);
+      padding-left: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--cinza);
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .elenco-nome {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .elenco-posicao {
+      color: var(--vermelho);
+      font-weight: 600;
+    }
+
+    footer {
+      background: var(--preto);
+      color: var(--branco);
+      padding: 30px 20px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      nav { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="topo">
+    <div class="logo">
+      <img src="escudo.png" alt="Escudo Tremembé Wolf FC" />
+      <h1>Tremembé Wolf FC</h1>
+    </div>
+    <nav>
+      <a href="#sobre">Clube</a>
+      <a href="#elenco">Elenco</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Orgulho de Tremembé</h1>
+    <p>Raça, união e espírito vencedor dentro de campo</p>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>O Clube</h2>
+  <p>
+    O <strong>Tremembé Wolf FC</strong> representa a força do futebol amador da cidade de Tremembé – SP.
+    Inspirado pela mentalidade do lobo, o clube preza por disciplina, união e competitividade,
+    buscando sempre evolução dentro e fora de campo.
+  </p>
+</section>
+
+<section id="elenco">
+  <h2>Elenco Profissional</h2>
+  <div class="cards">
+    <div class="card">
+      <p class="elenco-nome">Jogador 1</p>
+      <p class="elenco-posicao">Atacante</p>
+    </div>
+    <div class="card">
+      <p class="elenco-nome">Jogador 2</p>
+      <p class="elenco-posicao">Meio-Campo</p>
+    </div>
+    <div class="card">
+      <p class="elenco-nome">Jogador 3</p>
+      <p class="elenco-posicao">Zagueiro</p>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galeria Oficial</h2>
+  <div class="cards">
+    <div class="card">Foto Oficial</div>
+    <div class="card">Dia de Jogo</div>
+    <div class="card">Treinamento</div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato Oficial</h2>
+  <p>📸 Instagram: <a href="https://www.instagram.com/tremembe.wolf.fc2026" target="_blank">@tremembe.wolf.fc2026</a></p>
+  <p>📧 Email: contato@tremembewolffc.com</p>
+</section>
+
+<footer>
+  <p>© 2025 Tremembé Wolf FC • Site Oficial</p>
+</footer>
+
+</body>
+</html>
